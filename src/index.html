@@ -80,7 +80,8 @@
                     
                     // Display the bot's response
                     //test
-                    addMessage(data.content, false);
+                    addMessage(payload, false);
+                    addMessage(data, false);
 
                     // Note: You may need to adjust this based on your API's response format
                     if (data && data.content) {
