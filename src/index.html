@@ -55,8 +55,28 @@
             // Function to send a message to the API
             async function sendMessage(message) {
                 const payload = {
-                    messages: [
-                        { role: "user", content: message }
+                  messages: [
+                      {
+                        "role": "developer",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": `
+                              You are a helpful assistant that answers by putting word "Zamri:" at first word for each reply.
+                              Max words only 50 words. End of answer, say 'Yippe'
+                            `
+                          }
+                        ]
+                      },
+                      {
+                        "role": "user",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": message
+                          }
+                        ]
+                      }
                     ]
                 };
 
