@@ -84,8 +84,8 @@
                     console.log(data);
 
                     // Note: You may need to adjust this based on your API's response format
-                    if (data && data.content) {
-                        addMessage(data.content, false);
+                    if (data && data.response) {
+                        addMessage(data.response, false);
                     } else {
                         addMessage("Sorry, I couldn't process your request.", false);
                     }
